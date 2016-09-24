@@ -1,0 +1,10 @@
+<schema adapter="mangtas_legalcase">
+
+	<element tablename="lc_status">
+		<field name="objid" primary="true" prefix="LCS"/>
+		<field name="code" required="true" caption="Code" indexed="true" searchable="true"/>
+		<field name="name" required="true" caption="Name" indexed="true" searchable="true"/>
+		<field name="description" required="true" caption="Description" indexed="true" searchable="true"/>
+	</element>
+
+</schema>

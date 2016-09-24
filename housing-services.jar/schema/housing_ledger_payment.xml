@@ -1,0 +1,16 @@
+<schema adapter="housing">
+
+	<element tablename="housing_ledger_payment">
+		<field name="objid" primary="true" prefix="HLP" />
+		<field name="ledgerid" required="true" />
+		<field name="receiptno" required="true" />
+		<field name="receiptdate" required="true" type="date"/>
+		<field name="amount" required="true" type="decimal" />
+
+		<complex name="items" ref="housing_ledger_payment_item" jointype="one-to-many" orderBy="year,month">
+			<key field="objid" target="parentid" /> 		
+		</complex> 
+
+	</element>
+
+</schema>

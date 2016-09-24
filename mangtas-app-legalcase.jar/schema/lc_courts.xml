@@ -1,0 +1,10 @@
+<schema adapter="mangtas_legalcase">
+
+	<element tablename="lc_courts">
+		<field name="objid" primary="true" prefix="COT" />
+		<field name="code" required="true" caption="Code" indexed="true" searchable="true" />
+		<field name="name" required="true" caption="Name" indexed="true" searchable="true" />
+ 
+	</element>
+
+</schema>

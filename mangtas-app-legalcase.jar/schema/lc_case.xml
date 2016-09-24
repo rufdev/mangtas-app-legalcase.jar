@@ -1,0 +1,36 @@
+<schema adapter="mangtas_legalcase">
+
+	<element tablename="lc_case">
+
+		<field name="objid" primary="true" prefix="CASE"/>
+		<field name="state" required="true" caption="State" editable="false" indexed="true" /> 
+		<field name="caseno" required="true" caption="Case No" indexed="true" searchable="true"/> 
+		<field name="dtstart" required="true" caption="Date Started" indexed="true" type="date"/> 
+		<field name="casetype_objid" required="true" visible="false"/> 
+		<field name="casetype_code" required="true" caption="Case Type Code" indexed="true"/> 
+		<field name="casetype_name" required="true" caption="Case Type Name" indexed="true"/> 
+		<field name="title" required="true" caption="Title" indexed="true" searchable="true"/> 
+		<field name="owner_objid" required="true" visible="false"/> 
+		<field name="owner_name" required="true" caption="Owner Name" indexed="true" searchable="true"/> 
+		<field name="owner_address_text" required="true" caption="Owner Address" indexed="true" searchable="true"/> 
+		<field name="owner_type" required="true" caption="Owner Type" indexed="true" searchable="true"/>
+		<field name="owner_mobileno" required="true" caption="Mobile No" indexed="true" searchable="true"/>
+		<field name="owner_phoneno" required="true" caption="Phone No" indexed="true" searchable="true"/>
+		<field name="owner_email" required="true" caption="Email Address" indexed="true" searchable="true"/>
+		<field name="court_objid" required="true" visible="false"/> 
+		<field name="court_code" required="true" caption="Court Code" indexed="true" searchable="true"/>
+		<field name="court_name" required="true" caption="Court Name" indexed="true" searchable="true"/>
+		<field name="status_objid" required="true" required="true" visible="false"/> 
+		<field name="status_code" required="true" caption="Status Code" indexed="true" searchable="true"/>
+		<field name="status_name" required="true" caption="Status Name" indexed="true" searchable="true"/>
+		<field name="createdby_objid" visible="false"/> 
+		<field name="createdby_name" visible="false"/> 
+		<field name="dtcreated" visible="false"/> 
+		<field name="counsel_objid" required="true" visible="false"/> 
+		<field name="counsel_name" required="true" caption="Counsel Name" indexed="true" searchable="true"/>
+		<field name="counsel_title" required="true" caption="Counsel Title" indexed="true" searchable="true"/>
+		<field name="acceptance_fee" required="true" caption="Acceptance Fee" indexed="true" type="decimal" searchable="true"/>
+		<field name="notes" required="true" caption="Notes" indexed="true" searchable="true" type="text"/> 
+	</element> 
+
+</schema>

@@ -1,0 +1,10 @@
+<schema adapter="mangtas_legalcase">
+
+	<element tablename="lc_counsels">
+		<field name="objid" primary="true" prefix="LCC"/>
+		<field name="user_objid" required="true" visible="false" />
+		<field name="user_name" required="true" caption="Counsel Name" indexed="true" searchable="true" />
+		<field name="user_jobtitle" required="true" caption="Job Title" indexed="true" searchable="true" />
+	</element>
+
+</schema>

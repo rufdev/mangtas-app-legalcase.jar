@@ -1,0 +1,15 @@
+<schema adapter="mangtas_legalcase">
+
+	<element tablename="lc_case_ledger">
+
+		<field name="objid" primary="true" prefix="LCL"/>
+		<field name="case_objid" required="true" visible="false"/>
+		<field name="receiptno" required="true" caption="Receipt No." indexed="true" searchable="true"/>
+		<field name="receiptdate" required="true" caption="Receipt Date" indexed="true" type="date"/>
+		<field name="amount" required="true" caption="Amount" indexed="true" type="decimal"/>
+		<field name="createdby_objid" visible="false"/>
+		<field name="createdby_name" visible="false"/>
+		<field name="dtcreated" visible="false"/>
+	</element> 
+
+</schema>

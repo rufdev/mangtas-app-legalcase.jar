@@ -1,0 +1,21 @@
+<schema adapter="housing">
+
+	<element tablename="housing_ledger">
+		<field name="objid" primary="true" prefix=""/>
+		<field name="acctno" required="true"  caption="Acct No" indexed="true" searchable="true"/>
+		<field name="dtfiled" required="true" caption="Date Filed" indexed="true"/>
+		<field name="owner_objid" required="true" visible="false"/>
+		<field name="owner_name" required="true" caption="Owner Name" indexed="true"/>
+		<field name="owner_address_text" required="true" caption="Owner Address" indexed="true"/>
+		<field name="amortization" required="true" caption="Amortization" type="decimal"/>
+		<field name="principal" required="true" caption="Principal" type="decimal"  indexed="true"/>
+		<field name="lastdatepaid"  type="date" caption="Last Date Paid"/>
+
+		<field name="createdby_objid" visible="false"/>
+		<field name="createdby_name" visible="false"/>
+		<field name="dtcreated" visible="false"/>
+
+		<field name="lastdatecovered"  type="date" caption="Last Date Covered"/>
+	</element>
+
+</schema>

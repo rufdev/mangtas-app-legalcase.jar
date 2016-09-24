@@ -1,0 +1,27 @@
+import com.rameses.annotations.*;
+
+class HousingPersistenceInterceptor {
+	
+	@Before(pattern="PersistenceService.(create|update)", eval="#{args[0]._schemaname == 'housing_ledger_payment' }" ) 
+	void checkBefore( def evt ) {
+		def r = evt.args[0];
+
+		println "BEFORE SAVE *********************************************";
+		r.each { k,v->
+			println k+"="+v;
+		}
+	}
+
+	/*
+	@After(pattern="PersistenceService.(create|update)", eval="#{args[0]._schemaname == 'housing_ledger_payment' }" ) 
+	void checkAfter( def evt ) {
+		def r = evt.result;
+		println "AFTER SAVE *********************************************";
+		r.each { k,v->
+			println k+"="+v;
+		}
+	}
+	*/
+
+
+}
