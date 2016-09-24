@@ -1,6 +1,6 @@
 <schema adapter="mangtas_legalcase">
 
-	<element tablename="lc_counsels">
+	<element tablename="case_counsels">
 		<field name="objid" primary="true" prefix="LCC"/>
 		<field name="user_objid" required="true" visible="false" />
 		<field name="user_name" required="true" caption="Counsel Name" indexed="true" searchable="true" />

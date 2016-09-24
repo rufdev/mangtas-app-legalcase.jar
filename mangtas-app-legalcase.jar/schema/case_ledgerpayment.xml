@@ -1,15 +1,21 @@
 <schema adapter="mangtas_legalcase">
 
-	<element tablename="lc_case_ledger">
+	<element tablename="case_ledgerpayment">
 
-		<field name="objid" primary="true" prefix="LCL"/>
-		<field name="case_objid" required="true" visible="false"/>
+		<field name="objid" primary="true" prefix="CLP"/>
+		<field name="caseobjid" required="true" visible="false"/>
 		<field name="receiptno" required="true" caption="Receipt No." indexed="true" searchable="true"/>
 		<field name="receiptdate" required="true" caption="Receipt Date" indexed="true" type="date"/>
 		<field name="amount" required="true" caption="Amount" indexed="true" type="decimal"/>
+		<field name="remarks" caption="Remarks" indexed="true" searchable="true"/>
 		<field name="createdby_objid" visible="false"/>
 		<field name="createdby_name" visible="false"/>
 		<field name="dtcreated" visible="false"/>
+		
+
+		<complex name="items" ref="case_ledgerpayment_item" jointype="one-to-many">
+			<key field="objid" target="parentid" /> 		
+		</complex> 
 	</element> 
 
 </schema>

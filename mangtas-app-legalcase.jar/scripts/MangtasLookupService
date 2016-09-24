@@ -1,0 +1,18 @@
+import com.rameses.annotations.*
+import com.rameses.common.*
+import com.rameses.eserver.*;
+import java.rmi.server.UID;
+
+public class MangtasLookupService
+{
+
+	@Service('MangtasLookupUtilService')
+	def util 
+
+	@ProxyMethod
+	public def lookupEtracsUser( params ) {
+		return util.lookupMain( 'mangtas:getEtracsUser', params,'objid' )
+	}
+
+	
+}

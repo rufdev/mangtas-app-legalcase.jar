@@ -1,0 +1,83 @@
+import com.rameses.annotations.*;
+
+class MangtasPopulatingService {
+	
+	@DataContext("case_types")
+	def emcasetype;
+
+	@ProxyMethod
+	public def loadlist() {
+		def casetypes = [
+			"Forcible Abduction",
+			"Discovery and Revelation of Secrets",
+			"Coercion",
+			"Threats",
+			"The Crime of Trespass (Unauthorized Entry, Trespassing)",
+			"Crimes Against Security",
+			"R.A. 9208- THE ANTI TRAFFICKING IN PERSONS ACT OF 2003",
+			"Crimes Involving Involuntary Servitude",
+			"Inducing a Minor to Abandon His Home",
+			"Kidnapping and Failure to Return a Minor",
+			"Unlawful Arrest",
+			"Slight Illegal Detention",
+			"Kidnapping and Serious Illegal Detention",
+			"Elements of Consented Abduction",
+			"Abduction, Definition and Elements",
+			"Sex Tourism",
+			"Possession of Picklocks or Similar Tools",
+			"Robbery with Rape",
+			"Robbery with Homicide",
+			"Robbery with Violence",
+			"Robbery In General",
+			"Homicide",
+			"Murder",
+			"Death or Physical Injuries Under Exceptional Circumstances",
+			"Parricide",
+			"Offenses Against Decency and Good Custom",
+			"ILLEGAL MARRIAGES",
+			"DURATION AND EFFECTS OF PENALTIES",
+			"QUASI OFFENSES Criminal Negligence",
+			"INCRIMINATORY MACHINATIONS",
+			"Oral Defamation l Slander by Deed",
+			"LIBEL",
+			"CRIMES AGAINST HONOR",
+			"CRIMES AGAINST THE CIVIL STATUS OF PERSONS",
+			"Prosecution of private crimes and liability of persons guilty of crimes against chastity",
+			"ABDUCTION",
+			"ACTS OF LASCIVIOUSNESS",
+			"CONCUBINAGE",
+			"ADULTERY",
+			"Seduction",
+			"Crimes Against Property",
+			"Title Nine Revised Penal Code: Crimes Against Personal Liberty and Security",
+			"CRIMES AGAINST PERSONS",
+			"Art. 245 Revised Penal Code - ABUSES AGAINST CHASTITY",
+			"Title Seven Revised Penal Code- Crimes Committed by Public Officers",
+			"GAMBLING AND LOTTERY",
+			"Crimes Relative to Opium and Other Prohibited Drugs l Drugs Act",
+			"Revised Penal Code- TITLE FOUR: CRIMES AGAINST PUBLIC INTEREST",
+			"Evasion of Service of Sentence",
+			"Public Disorders",
+			"Crimes Against Persons in Authority and their Agents",
+			"Illegal Assemblies and Illegal Association",
+			"Crimes Against Popular Representations",
+			"Crimes In Violation of the Freedom of Religion.",
+			"Prohibition and Dissolution of Peaceful Meetings",
+			"THE HUMAN SECURITY ACT OF 2007"
+		]
+		def i = 0;
+		casetypes.each{
+			def o = [
+				objid : "CTY" + new java.rmi.server.UID(),
+				code : i + "",
+				name : it 
+			]
+			i++;
+			emcasetype.create(o)
+		}
+
+		
+	}
+
+
+}

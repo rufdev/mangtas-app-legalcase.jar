@@ -1,0 +1,20 @@
+<schema adapter="mangtas_legalcase">
+
+	<element tablename="case_ledgerpayment_item">
+
+		<field name="objid" primary="true" prefix="CPI" />
+		<field name="parentid" required="true" visible="false" />
+
+		<complex name="parent" ref="case_ledgerpayment" jointype="many-to-one" includefields="receiptno,receiptdate,caseobjid" 
+			required="false">
+			<key field="parentid" target="objid" />
+		</complex>	
+
+		<field name="amount" required="true" caption="Amount" type="decimal" />
+		<field name="account_objid" required="true" visible="false" />
+		<field name="account_code" required="true" caption="Account Code" />
+		<field name="account_title" required="true" caption="Account title" />
+		
+	</element> 
+
+</schema>
