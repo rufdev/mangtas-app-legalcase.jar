@@ -1,0 +1,10 @@
+<schema adapter="mangtas_legalcase">
+
+	<element tablename="case_followups_type">
+
+		<field name="objid" primary="true" prefix="CFT" />
+		<field name="code" required="true" caption="Code"  indexed="true" searchable="true"/>
+		<field name="name" required="true" caption="Name" type="" indexed="true" searchable="true"/>
+	</element>
+
+</schema>

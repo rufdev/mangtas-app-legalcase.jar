@@ -5,7 +5,7 @@
 		<field name="objid" primary="true" prefix="CPI" />
 		<field name="parentid" required="true" visible="false" />
 
-		<complex name="parent" ref="case_ledgerpayment" jointype="many-to-one" includefields="receiptno,receiptdate,caseobjid" 
+		<complex name="parent" ref="case_ledgerpayment" jointype="many-to-one" includefields="objid,receiptno,receiptdate,caseobjid,remarks,createdby_name,dtcreated" 
 			required="false">
 			<key field="parentid" target="objid" />
 		</complex>	

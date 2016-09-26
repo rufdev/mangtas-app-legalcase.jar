@@ -1,0 +1,16 @@
+<schema adapter="mangtas_legalcase">
+
+	<element tablename="case_followups">
+
+		<field name ="objid" primary="true" prefix="CF"/>
+		<field name="caseobjid" required="true" visible="false"/>
+		<field name ="dtstart" required="true" caption="Date Start" type="date"/>
+		<field name ="followuptype_objid" visible="false" />
+		<field name ="followuptype_code" required="true" caption="Followup Type Code"/>
+		<field name ="followuptype_name" required="true" caption="Followup Type"/>
+		<field name ="title" required="true" caption="Title"/>
+		<field name ="description" required="true" caption="Description"/>
+		
+	</element> 
+
+</schema>

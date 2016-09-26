@@ -7,7 +7,7 @@
 		<field name="caseno" required="true" caption="Case No" indexed="true" searchable="true"/> 
 		<field name="dtfiled" required="true" caption="Date Started" indexed="true" type="date"/> 
 		<field name="casetype_objid" required="true" visible="false"/> 
-		<field name="casetype_code" required="true" caption="Case Type Code" indexed="true"/> 
+		<field name="casetype_code" required="true" visible="false" caption="Case Type Code" indexed="true"/> 
 		<field name="casetype_name" required="true" caption="Case Type Name" indexed="true"/> 
 		<field name="title" required="true" caption="Title" indexed="true" searchable="true"/> 
 		<field name="owner_objid" required="true" visible="false"/> 
@@ -18,19 +18,19 @@
 		<field name="owner_phoneno" caption="Phone No" indexed="true" searchable="true"/>
 		<field name="owner_email" caption="Email Address" indexed="true" searchable="true"/>
 		<field name="court_objid" required="true" visible="false"/> 
-		<field name="court_code" required="true" caption="Court Code" indexed="true" searchable="true"/>
+		<field name="court_code" required="true" visible="false" caption="Court Code" indexed="true" searchable="true"/>
 		<field name="court_name" required="true" caption="Court Name" indexed="true" searchable="true"/>
 		<field name="status_objid" required="true" visible="false"/> 
-		<field name="status_code" required="true" caption="Status Code" indexed="true" searchable="true"/>
+		<field name="status_code" required="true" visible="false" caption="Status Code" indexed="true" searchable="true"/>
 		<field name="status_name" required="true" caption="Status Name" indexed="true" searchable="true"/>
 		<field name="createdby_objid" visible="false"/> 
 		<field name="createdby_name" visible="false"/> 
 		<field name="dtcreated" visible="false"/> 
 		<field name="counsel_objid" required="true" visible="false"/> 
 		<field name="counsel_name" required="true" caption="Counsel Name" indexed="true" searchable="true"/>
-		<field name="counsel_jobtitle" required="true" caption="Counsel Title" indexed="true" searchable="true"/>
-		<field name="acceptancefee" required="true" caption="Acceptance Fee" indexed="true" type="decimal" searchable="true"/>
-		<field name="notes" required="true" caption="Notes" indexed="true" searchable="true"/> 
+		<field name="counsel_jobtitle" required="true" visible="false" caption="Counsel Title" indexed="true" searchable="true"/>
+		<field name="acceptancefee" caption="Acceptance Fee" indexed="true" type="decimal" searchable="true"/>
+		<field name="notes" caption="Notes" indexed="true" searchable="true"/> 
 	</element> 
 
 </schema>
